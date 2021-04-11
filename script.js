@@ -1,24 +1,74 @@
-// 1. Create a request variable from XMLHttpRequest(inbuild class in JS)
-var request = new XMLHttpRequest();
+setTimeout(()=>{
+    document.getElementById("div").innerHTML = 10;
+    setTimeout(()=>{
+        document.getElementById("div").innerHTML = 9;
+        setTimeout(()=>{
+            document.getElementById("div").innerHTML = 8;
+            setTimeout(()=>{
+                document.getElementById("div").innerHTML = 7;
+                setTimeout(()=>{
+                    document.getElementById("div").innerHTML =6;
+                    setTimeout(()=>{
+                        document.getElementById("div").innerHTML = 5;
+                        setTimeout(()=>{
+                            document.getElementById("div").innerHTML = 4;
+                            setTimeout(()=>{
+                                document.getElementById("div").innerHTML = 3;
+                                setTimeout(()=>{
+                                    document.getElementById("div").innerHTML = 2;
+                                    setTimeout(()=>{
+                                        document.getElementById("div").innerHTML = 1;
+                                        setTimeout(()=>{
+                                            document.getElementById("div").innerHTML = "Happy Independence Day!"
+                                        },1000)
+                                    },1000)
+                                },1000)
+                            },1000)
+                        },1000)
+                    },1000)
+                },1000)
+            },1000)
+        },1000)
+    },1000)
+},1000)
 
-// 2. Create a new connection 
-request.open('GET','https://restcountries.eu/rest/v2/all',true)
-// 3. send the request 
-request.send();
-// 4. load the Data
-request.onload = function (){
-    var countryData = JSON.parse(this.response);
-    console.log(countryData);
 
-    // for(i in countryData){
-    //     console.log(countryData[i].capital);
-    // }
 
-    //Extract and print the total population of all the countries in the console
-    var sum =0;
-    for(i=0;i<countryData.length;i++){
-        //console.log(countryData[i].population);
-        sum = sum + countryData[i].population;
-    }
-    console.log("Total population of all Countries: "+sum);
-}
+
+// var count=10;
+// setTimeout(() => {
+//     console.log(count);
+//     setTimeout(()=>{
+//         console.log(count-1);
+//     },2000); 
+//     setTimeout(()=>{
+//         console.log(count-2);
+//     },2000);
+//     setTimeout(()=>{
+//         console.log(count-3);
+//     },2000);
+//     setTimeout(()=>{
+//         console.log(count-4);
+//     },2000);  
+//     setTimeout(()=>{
+//         console.log(count-5);
+//     },2000); 
+//     setTimeout(()=>{
+//         console.log(count-6);
+//     },2000);
+//     setTimeout(()=>{
+//         console.log(count-7);
+//     },2000);
+//     setTimeout(()=>{
+//         console.log(count-8);
+//     },2000);  
+//     setTimeout(()=>{
+//         console.log(count-9);
+//     },2000);
+//     setTimeout(()=>{
+//         console.log(count-10);
+//     },2000); 
+//     setTimeout(()=>{
+//         console.log("Happy Independence Day!");
+//     },2000);
+// }, 1000);
